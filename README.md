@@ -1,6 +1,5 @@
 # python-projects - Brand name Generator!
 
-# Write your code below this line 👇
 # a = input("a:")
 # b = input("b:")
 
