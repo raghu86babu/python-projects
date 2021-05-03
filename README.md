@@ -15,6 +15,92 @@
 print("Hello Everyone Welcome to Brand Name Generator!")
 city = input("Which city you grew up in\n")
 petName = input("What is your pet name\n")
-print ("Your brand name could be "+ city +" "+ petName
-)
+print ("Your brand name could be "+ city +" "+ petName)
+
+
+# Calculator code
+
+#Addition
+def add(n1,n2):
+  return n1 + n2
+
+# Substract
+def subtract(n1,n2):
+  return n1 - n2  
+
+# Multiply
+def multiply(n1,n2):
+  return n1 * n2
+
+# Divide
+def divide(n1,n2):
+  return n1 / n2
+
+operations = {
+  "+": add,
+  "-": subtract,
+  "*": multiply,
+  "/":divide
+}  
+
+num1 = int(input("Enter the first number: "))
+
+
+for symbol in operations:
+  print(symbol)
+operation_symbol = input("Pick and operation symbol: ") 
+num2 = int(input("Enter the second number: ")) 
+  
+calculation_function = operations[operation_symbol]
+answer = calculation_function(num1,num2)
+
+
+print(f"{num1} {operation_symbol} {num2} = {answer}")
+
+
+# Calculator code with while loop.
+
+#Addition
+def add(n1,n2):
+  return n1 + n2
+
+# Substract
+def subtract(n1,n2):
+  return n1 - n2  
+
+# Multiply
+def multiply(n1,n2):
+  return n1 * n2
+
+# Divide
+def divide(n1,n2):
+  return n1 / n2
+
+operations = {
+  "+": add,
+  "-": subtract,
+  "*": multiply,
+  "/":divide
+}  
+
+num1 = int(input("Enter the first number: "))
+
+
+for symbol in operations:
+  print(symbol)
+should_continue = True  
+
+while should_continue:
+  operation_symbol = input("Pick and operation symbol: ") 
+  num2 = int(input("Enter the next number: ")) 
+  
+  calculation_function = operations[operation_symbol]
+  answer = calculation_function(num1,num2)
+
+  print(f"{num1} {operation_symbol} {num2} = {answer}")
+
+  if input(f"Enter 'y' to continue with {answer}. Enter 'n' to exit: ") == "y":
+    num1 = answer
+  else:
+    should_continue = False  
 
